@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'mptt',
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
+    'djangocms_link',
 
     # Django apps
     'django.contrib.admin',
