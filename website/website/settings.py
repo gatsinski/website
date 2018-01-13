@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'menus',
     'sekizai',
     'treebeard',
+    'filer',
+    'easy_thumbnails',
+    'mptt',
     'djangocms_admin_style',
 
     # Django apps
@@ -97,6 +100,15 @@ TEMPLATES = [
 
 CMS_TEMPLATES = (
     ('base/base.html', 'Base template'),
+)
+
+THUMBNAIL_HIGH_RESOLUTION = True
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters'
 )
 
 WSGI_APPLICATION = 'website.wsgi.application'
