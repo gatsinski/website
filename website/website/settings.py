@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
     'djangocms_link',
+    'djangocms_file',
 
     # Django apps
     'django.contrib.admin',
