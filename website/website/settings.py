@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'mptt',
     'djangocms_admin_style',
+    'djangocms_text_ckeditor',
 
     # Django apps
     'django.contrib.admin',
