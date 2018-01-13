@@ -13,6 +13,7 @@ djangocms-file==2.0.2
 djangocms-link==2.1.2
 djangocms-picture==2.0.6
 djangocms-text-ckeditor==3.5.1
+djangocms-video==2.0.4
 easy-thumbnails==2.4.2
 html5lib==0.9999999
 Pillow==5.0.0

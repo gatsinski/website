@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'djangocms_link',
     'djangocms_file',
     'djangocms_picture',
+    'djangocms_video',
 
     # Django apps
     'django.contrib.admin',
