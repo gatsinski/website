@@ -12,6 +12,7 @@ djangocms-attributes-field==0.3.0
 djangocms-audio==1.0.2
 djangocms-file==2.0.2
 djangocms-googlemap==1.1.1
+djangocms-icon==0.2.0
 djangocms-link==2.1.2
 djangocms-picture==2.0.6
 djangocms-snippet==1.9.2
