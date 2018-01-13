@@ -10,6 +10,7 @@ django-treebeard==4.2.0
 djangocms-admin-style==1.2.7
 djangocms-attributes-field==0.3.0
 djangocms-file==2.0.2
+djangocms-googlemap==1.1.1
 djangocms-link==2.1.2
 djangocms-picture==2.0.6
 djangocms-text-ckeditor==3.5.1
