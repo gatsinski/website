@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'djangocms_video',
     'djangocms_googlemap',
     'djangocms_snippet',
+    'djangocms_style',
 
     # Django apps
     'django.contrib.admin',
