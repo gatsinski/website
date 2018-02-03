@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <article>
+    <header>
+      <h1>{{ object.title }}</h1>
+      <p>{{ object.created_at }}</p>
+    </header>
+    {{ object.content }}
+  </article>
+
+  <a href="{% url 'blog:post_list' %}">{% trans "All posts" %}</a>
+{% endblock %}

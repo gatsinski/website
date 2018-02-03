@@ -1,0 +1,65 @@
+# Website translations in Bulgarian
+# Copyright (C) 2018 Hristo Gatsinski
+# This file is distributed under the same license as the PACKAGE package.
+# Hristo Gatsinski <gatsinski@gmail.com>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-03 10:19+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Hristo Gatsinski <gatsinski@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+#: website/contrib/blog/cms_apps.py:10
+msgid "Blog"
+msgstr "Блог"
+
+#: website/contrib/blog/models.py:10
+msgid "Title"
+msgstr "Заглавие"
+
+#: website/contrib/blog/models.py:12
+msgid "Slug"
+msgstr "Слъг"
+
+#: website/contrib/blog/models.py:14
+msgid "Author"
+msgstr "Автор"
+
+#: website/contrib/blog/models.py:15
+msgid "Content"
+msgstr "Съдържание"
+
+#: website/contrib/blog/models.py:16
+msgid "Created at"
+msgstr "Създадена на"
+
+#: website/contrib/blog/models.py:18
+msgid "Updated at"
+msgstr "Обновена на"
+
+#: website/contrib/blog/models.py:20
+msgid "Published"
+msgstr "Публикувана"
+
+#: website/contrib/blog/models.py:24
+msgid "Post"
+msgstr "Публикация"
+
+#: website/contrib/blog/models.py:25
+#: website/contrib/blog/templates/blog/post_list.html:5
+msgid "Posts"
+msgstr "Публикации"
+
+#: website/contrib/blog/templates/blog/post_detail.html:9
+msgid "All posts"
+msgstr "Всички публикации"

@@ -27,3 +27,4 @@ Pillow==5.0.0
 pytz==2017.3
 six==1.11.0
 Unidecode==0.4.21
+aldryn-apphooks-config==0.3.3

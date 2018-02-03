@@ -1,0 +1,11 @@
+{% extends "admin/change_form.html" %}{% load i18n %}
+{% load i18n admin_modify %}
+
+{% block object-tools-items %}
+  {% if original.is_published %}
+    <li><a href="action/unpublish">{% trans "Unpublish" %}</a></li>
+  {% else %}
+    <li><a href="action/publish">{% trans "Publish" %}</a></li>
+  {% endif %}
+  {{ block.super }}
+{% endblock %}

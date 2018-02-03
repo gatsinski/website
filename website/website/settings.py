@@ -64,6 +64,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
+    # Project apps
+    'website.contrib.blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -171,6 +174,10 @@ PARLER_LANGUAGES = {
         {'code': 'bg'},
     ),
 }
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 TIME_ZONE = 'UTC'
 
