@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'filer',
     'easy_thumbnails',
     'mptt',
+    'parler',
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
     'djangocms_link',
@@ -162,6 +163,13 @@ LANGUAGES = [
     ('en', 'English'),
     ('bg', 'Български'),
 ]
+
+PARLER_LANGUAGES = {
+    1: (
+        {'code': 'en'},
+        {'code': 'bg'},
+    ),
+}
 
 TIME_ZONE = 'UTC'
 
