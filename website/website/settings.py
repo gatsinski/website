@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'mptt',
     'parler',
+    'django_object_actions',
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
     'djangocms_link',
