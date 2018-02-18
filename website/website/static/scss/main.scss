@@ -118,3 +118,19 @@ footer {
   background: #ccc;
   padding: 20px;
 }
+
+/* Blog */
+.blog {
+  > ul {
+    list-style-type: none;
+    > li {
+      a {
+        text-decoration: none;
+        color: #437fe6;
+        &:hover {
+          color: #3869be;
+        }
+      }
+    }
+  }
+}
