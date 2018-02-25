@@ -1,9 +1,10 @@
-{% load cms_tags sekizai_tags %}
+{% load cms_tags menu_tags sekizai_tags staticfiles compile_static %}
 <html>
   <head>
     <title>
       {% page_attribute "page_title" %}
     </title>
+    <link rel="stylesheet" href="{% static 'scss/main.scss'|compile %}" />
     {% block css %} {% endblock css %}
     {% render_block "css" %}
     {% block js %} {% endblock js %}
@@ -11,8 +12,14 @@
   </head>
   <body>
     {% cms_toolbar %}
-    {% block content %}
-      {% placeholder "content" %}
-    {% endblock content %}
+    {% show_menu 0 100 100 100 "base/includes/header.html" %}
+
+    <main>
+      {% block content %}
+        {% placeholder "content" %}
+      {% endblock content %}
+    </main>
+
+    {% include "base/includes/footer.html" %}
   </body>
 </html>
