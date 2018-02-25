@@ -146,6 +146,7 @@ TEMPLATES = [
                 # Third party context processors
                 'sekizai.context_processors.sekizai',
                 'cms.context_processors.cms_settings',
+                'website.context_processors.website',
             ],
         },
     },
