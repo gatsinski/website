@@ -1,25 +1,38 @@
 {% load cms_tags %}
 
-<nav>
-  <ul class="menu">
-    {% for child in children %}
-    <li>
-      <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="first_level_menu_item {% if forloop.counter == 1 %} first {% endif %}">
-        {{ child.get_menu_title }}
-      </a>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="/">{{ site_name }}</a>
 
-      {% if child.children %}
-      <ul>
-        {% for subchild in child.children %}
-        <li>
-          <a class="second-level-menu_item {% if forloop.counter == 1 %} first {% endif %}" href="{{ subchild.attr.redirect_url|default:subchild.get_absolute_url }}">
-            {{ subchild.get_menu_title }}
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      {% for child in children %}
+        <li class="nav-item {% if child.children %} dropdown {% endif %}">
+          <a class="nav-link
+            {% if child.children %} dropdown-toggle {% endif %}
+            {% if child.selected %} active {% endif %}"
+            {% if child.children %} data-toggle="dropdown" {% endif %}
+            href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+            {{ child.get_menu_title }}
           </a>
+          {% if child.children %}
+            <div class="dropdown-menu bg-dark">
+              {% for subchild in child.children %}
+                <a class="dropdown-item text-white {% if subchild.selected %} active {% endif %}"
+                  href="{{ subchild.attr.redirect_url|default:subchild.get_absolute_url }}">
+                  {{ subchild.get_menu_title }}
+                </a>
+              {% endfor %}
+            </div>
+          {% endif %}
         </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>
