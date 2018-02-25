@@ -2,13 +2,20 @@
 {% load i18n %}
 
 {% block content %}
-  <article>
-    <header>
-      <h1>{{ object.title }}</h1>
-      <p>{{ object.created_at }}</p>
-    </header>
-    {{ object.content }}
-  </article>
-
-  <a href="{% url 'blog:post_list' %}">{% trans "All posts" %}</a>
+<div class="container-fluid">
+  <div class="row no-gutters">
+    <section class="col-12 col-lg-10 offset-lg-1 post-detail">
+      <article>
+        <header>
+          <h1>{{ object.title }}</h1>
+          <p>{{ object.created_at }}</p>
+        </header>
+        {{ object.content }}
+      </article>
+      <p class="all-posts">
+        <a href="{% url 'blog:post_list' %}">{% trans "Back to all posts" %}</a>
+      </p>
+    </section>
+  </div>
+</div>
 {% endblock %}

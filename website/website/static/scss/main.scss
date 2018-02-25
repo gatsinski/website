@@ -4,7 +4,10 @@
 @import "../../node_modules/bootstrap/scss/_variables.scss";
 @import "../../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
 
+/* Color variables */
 $color-dark: #333;
+$royal-blue: #4169E1;
+$cerulean: #007BA7;
 
 body {
   background: #ddd;
@@ -55,55 +58,7 @@ body {
 
 main {
   background: #fff;
-  padding: 20px 50px;
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10px;
-
-  &.no-gap {
-    grid-gap: 0px;
-  }
-
-  .col-1 {
-    grid-column: span 1;
-  }
-  .col-2 {
-    grid-column: span 2;
-  }
-  .col-3 {
-    grid-column: span 3;
-  }
-  .col-4 {
-    grid-column: span 4;
-  }
-  .col-5 {
-    grid-column: span 5;
-  }
-  .col-6 {
-    grid-column: span 6;
-  }
-  .col-7 {
-    grid-column: span 7;
-  }
-  .col-8 {
-    grid-column: span 8;
-  }
-  .col-9 {
-    grid-column: span 9;
-  }
-  .col-10 {
-    grid-column: span 10;
-  }
-  .col-11 {
-    grid-column: span 11;
-  }
-  .col-12 {
-    grid-column: span 12;
-  }
+  padding: 20px 10px;
 }
 
 /* Footer */
@@ -113,17 +68,34 @@ footer {
 }
 
 /* Blog */
-.blog {
+.post-list {
   > ul {
+    padding-left: 5px;
+    padding-top: 20px;
     list-style-type: none;
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-left: 40px;
+    }
+
     > li {
       a {
         text-decoration: none;
-        color: #437fe6;
+        color: $royal-blue;
         &:hover {
-          color: #3869be;
+          color: $cerulean;
         }
       }
     }
+  }
+}
+
+.post-detail {
+  h1 {
+    color: $royal-blue;
   }
 }
