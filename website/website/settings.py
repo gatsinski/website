@@ -21,7 +21,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, 'static'),
+    os.path.join(PROJECT_PATH, 'static',),
+    os.path.join(BASE_DIR, 'node_modules'),
 )
 
 STATICFILES_FINDERS = (
@@ -36,15 +37,26 @@ PIPELINE = {
     'STYLESHEETS': {
         'main': {
             'source_filenames': (
+                'bootstrap/scss/bootstrap.scss',
                 'scss/main.scss',
             ),
             'output_filename': 'css/main.css',
         },
     },
+    'JAVASCRIPT': {
+        'main': {
+            'source_filenames': (
+                'jquery/dist/jquery.min.js',
+                'bootstrap/dist/js/bootstrap.bundle.min.js',
+            ),
+            'output_filename': 'js/main.js',
+        }
+    },
     'COMPILERS': (
         'pipeline.compilers.sass.SASSCompiler',
     )
 }
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
