@@ -27,8 +27,24 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'static_precompiler.finders.StaticPrecompilerFinder',
+    'pipeline.finders.PipelineFinder',
 )
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+PIPELINE = {
+    'STYLESHEETS': {
+        'main': {
+            'source_filenames': (
+                'scss/main.scss',
+            ),
+            'output_filename': 'css/main.css',
+        },
+    },
+    'COMPILERS': (
+        'pipeline.compilers.sass.SASSCompiler',
+    )
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -64,7 +80,7 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_snippet',
     'djangocms_style',
-    'static_precompiler',
+    'pipeline',
 
     # Django apps
     'django.contrib.admin',

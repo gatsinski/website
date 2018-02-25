@@ -9,7 +9,7 @@ django-sekizai==0.10.0
 django-treebeard==4.2.0
 django-parler==1.9.1
 django-object-actions==0.10.0
-django-static-precompiler==1.7
+django-pipeline==1.6.14
 djangocms-admin-style==1.2.7
 djangocms-attributes-field==0.3.0
 djangocms-audio==1.0.2

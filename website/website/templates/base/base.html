@@ -1,12 +1,14 @@
-{% load cms_tags menu_tags sekizai_tags staticfiles compile_static %}
+{% load cms_tags menu_tags sekizai_tags staticfiles pipeline %}
 <html>
   <head>
     <title>
       {% page_attribute "page_title" %}
     </title>
-    <link rel="stylesheet" href="{% static 'scss/main.scss'|compile %}" />
+    {% stylesheet 'main' %}
     {% block css %} {% endblock css %}
     {% render_block "css" %}
+
+    {% javascript 'main' %}
     {% block js %} {% endblock js %}
     {% render_block "js" %}
   </head>
