@@ -197,6 +197,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+DATE_FORMAT = 'd.m.Y'
+TIME_FORMAT = 'H:i'
+DATETIME_FORMAT = 'H:i d.m.Y'
+
 SITE_ID = 1
 
 try:
