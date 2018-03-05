@@ -105,6 +105,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     # Project apps
+    'website',
     'website.contrib.blog.apps.BlogConfig',
 ]
 
