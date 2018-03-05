@@ -1,0 +1,13 @@
+{% load font_awesome %}
+
+<div class="contact">
+  <a href="{{ instance.link }}">
+    <span class="fa-stack fa-2x">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-{{ instance.icon|icon }} fa-stack-1x contact-icon"></i>
+    </span>
+    <p>
+      {{ instance.text }}
+    </p>
+  </a>
+</div>

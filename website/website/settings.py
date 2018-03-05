@@ -107,6 +107,7 @@ INSTALLED_APPS = [
     # Project apps
     'website',
     'website.contrib.blog.apps.BlogConfig',
+    'website.contrib.contacts.apps.ContactsConfig',
 ]
 
 MIDDLEWARE = [
