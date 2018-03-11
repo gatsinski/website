@@ -29,3 +29,4 @@ pytz==2017.3
 six==1.11.0
 Unidecode==0.4.21
 aldryn-apphooks-config==0.3.3
+psycopg2==2.7.4
