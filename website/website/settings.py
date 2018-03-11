@@ -55,7 +55,8 @@ PIPELINE = {
     },
     'COMPILERS': (
         'pipeline.compilers.sass.SASSCompiler',
-    )
+    ),
+    'SASS_BINARY': '/usr/bin/env sassc',
 }
 
 
