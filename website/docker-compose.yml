@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - ~/website/postgresql/:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${WEBSITE_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${WEBSITE_POSTGRES_PASSWORD}
+      - POSTGRES_DB=${WEBSITE_POSTGRES_DB}
+  web:
+    build: .
+    volumes:
+      - .:/website
+      - ~/website/uwsgi:/uwsgi
+    depends_on:
+      - db
