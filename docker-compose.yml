@@ -14,5 +14,7 @@ services:
     volumes:
       - .:/website
       - ~/website/uwsgi:/uwsgi
+      - ~/website/static:/website/static
+      - ~/website/media:/website/media
     depends_on:
       - db
