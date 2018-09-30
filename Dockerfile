@@ -4,12 +4,12 @@ RUN apk update && apk upgrade && apk --update add \
     linux-headers musl-dev gcc zlib-dev jpeg-dev \
     python3 python3-dev postgresql-dev \
     nodejs nodejs-npm  libsass sassc
+RUN pip3 install uwsgi
 RUN npm install -g yuglify
 RUN mkdir /website
 WORKDIR /website
 ADD requirements.txt /website/
 RUN pip3 install -r requirements.txt
-RUN pip3 install uwsgi
 ADD package.json /website/
 ADD package-lock.json /website/
 RUN npm install
