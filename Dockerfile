@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.8
 ENV PYTHONUNBUFFERED 1
 RUN apk update && apk upgrade && apk --update add \
     linux-headers musl-dev gcc zlib-dev jpeg-dev \
