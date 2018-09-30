@@ -4,6 +4,7 @@ RUN apk update && apk upgrade && apk --update add \
     linux-headers musl-dev gcc zlib-dev jpeg-dev \
     python3 python3-dev postgresql-dev \
     nodejs nodejs-npm  libsass sassc
+RUN npm install -g yuglify
 RUN mkdir /website
 WORKDIR /website
 ADD requirements.txt /website/
