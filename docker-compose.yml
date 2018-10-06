@@ -16,5 +16,10 @@ services:
       - ~/website/uwsgi:/uwsgi
       - ~/website/static:/website/static
       - ~/website/media:/website/media
+    environment:
+      - POSTGRES_USER=${WEBSITE_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${WEBSITE_POSTGRES_PASSWORD}
+      - POSTGRES_DB=${WEBSITE_POSTGRES_DB}
+      - POSTGRES_HOST=db
     depends_on:
       - db
