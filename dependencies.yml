@@ -3,7 +3,5 @@ dependencies:
 - type: dockerfile
   path: Dockerfile
 - type: python
-  path: requirements.txt
-- type: python
   path: Pipfile
 - type: js

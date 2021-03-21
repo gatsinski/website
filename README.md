@@ -15,8 +15,7 @@ the final project size. This task is managed by **Django Pipeline** and it is
 performed only on production environment. During development all files are
 displayed unmodified to ease debugging.
 
-All Python libraries are installed and managed by **Pipenv** but yet optional
-`requirements.txt` files is kept for users who prefer the old approach.
+All Python libraries are installed and managed by **Pipenv**.
 
 **Bootstrap** is used for the frontend together with custom styles written
 entirely with **Sass**. The **Sass** source files are compiled into **CSS** by
